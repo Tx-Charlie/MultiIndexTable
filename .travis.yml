@@ -1,0 +1,16 @@
+lanuage: cpp
+compiler: g++
+sudo: require
+dist: bionic
+
+before_install:
+        - sudo apt update
+
+install:
+        - sudo apt install qt5-default
+
+script:
+        - mkdir build && cd build && qmake .. && make -j$(nproc)
+
+after_sucess:
+        - echo "done"
