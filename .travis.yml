@@ -7,7 +7,7 @@ before_install:
         - sudo apt update
 
 install:
-        - sudo apt install qt5-default
+        - sudo apt install qt5-default libboost-dev 
 
 script:
         - mkdir build && cd build && qmake .. && make -j$(nproc)
